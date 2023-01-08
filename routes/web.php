@@ -1,0 +1,25 @@
+<?php
+
+use App\Http\Controllers\Guest\ResourceController;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    $giftIntro = DB::table('gifts')
+                    ->limit(4)
+                    ->get();
+    // dd($giftIntro);
+    return view('home', compact('giftIntro'));
+})->name('home');
+
+Route::resource('gifts', ResourceController::class);

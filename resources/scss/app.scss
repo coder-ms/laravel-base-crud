@@ -1,0 +1,347 @@
+@use './partials/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+@import '~bootstrap/scss/bootstrap';
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+
+
+
+body {
+    font-family: 'Mountains of Christmas', cursive;
+    background-color: $not-white;
+    color: red;
+    height: 1000px;
+    main{
+        background-image: url('/resources/img/main-bg.png');
+    }
+}
+//HEADER SECTION
+
+.my-bg{
+    background-color: $dark-green;
+}
+
+.my-span{
+    color: $bg-red !important;
+}
+
+header {
+    background-color: rgb(194, 39, 44,0.8);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    .logo{
+        display: flex;
+        align-items: center;
+        img{
+            width: 80px;
+        }
+        h2 {
+            font-weight: 700;
+            font-size: 2rem;
+            letter-spacing: 0.7rem;
+            span {
+                text-transform: uppercase;
+                color: $dark-green;
+                font-weight: bold;
+            }
+        }
+    }
+
+    li a {
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1.25rem;
+        color: $dark-green;
+        transition: all 0.3s ease;
+        &:hover:not(.active_li) {
+            // color: $cream;
+            color: $not-white;
+
+            transform: scaleX(1.15  );
+        }
+
+    }
+    .active_li {
+        color: $not-white;
+
+        font-weight: 700;
+    }
+
+
+}
+// JUMBO SECTION
+
+#jumbo{
+    // margin-top: 80px;
+    height: 500px;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/594/267/original/red-christmas-background-free-vector.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -100px;
+    background-size: cover;
+
+    .text-jumbo {
+        margin-top: 120px;
+    }
+    h1 {
+        color: $not-white;
+        text-align: center;
+        font-size: 5rem;
+     }
+     p {
+         color: $not-white;
+         text-align: center;
+         font-size: 2rem;
+     }
+     .add_btn {
+        background-color: $dark-green;
+        border: none;
+        color: $not-white;
+        padding: 0.6rem 1.5rem;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 0 auto;
+
+        a {
+            text-decoration: none;
+            color: $not-white;
+        }
+
+
+        &:hover {
+            background-color: $not-white;
+            a {
+                color: $bg-red;
+            }
+
+        }
+     }
+}
+// GIFT HOME
+#home{
+
+    .carousel-item{
+        height: 460px;
+        border-radius: 10px;
+        img{
+            max-height: 100%;
+            border-radius: 10px;
+        }
+        .carousel-caption {
+
+            h5, p{
+                color: white;
+                font-weight: 700;
+            }
+            width: fit-content;
+            padding: 1rem 2rem;
+            height: fit-content;
+            border-radius: 0.6rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: auto;
+        }
+    }
+
+    button.show_all_btn {
+
+        background-color: $bg-red;
+        padding: 0.7rem 1.8rem;
+        border: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $dark-green;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: $not-white;
+
+        }
+    }
+}
+
+
+//  GIFTS LIST
+
+section#gifts_list {
+    a {
+        text-decoration: none;
+        color: $not_white;
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    .col{
+        padding: .3rem;
+        .my-card{
+            background-color: $dark-red;
+            height: 405px;
+            overflow: hidden;
+            border-radius: 0.6rem;
+            .img_wrapper {
+                width: 100%;
+
+                img{
+                    max-width: 100%;
+                    transition: all 0.3s ease;
+                }
+        // &:hover img {
+        //     transform: scale(1.05);
+        // }
+    }}
+    p {
+        color: $not-white;
+    }
+    h4 {
+
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.8rem;
+        margin-top: 0.6rem;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+
+    }
+    }
+
+
+
+
+}
+// GIFT SHOW SECTION
+#single_gift{
+    .modal_bg {
+        background-color: $bg-red;
+    }
+    font-weight: bold;
+    .img-section{
+        min-height: 300px;
+        img.gift{
+            max-width: 70%;
+        }
+        position: relative;
+        .flake{
+            position: absolute;
+            z-index: 100;
+            top: -25px;
+            left: 10px;
+            width: 330px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    h5, h2{
+        font-weight: 900;
+    }
+    .btn-section{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+    }
+    .text-section{
+        margin-left: 0;
+        color: $dark-green;
+        button{
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+
+            }
+
+            padding: .5rem 1.5rem ;
+            font-weight: 700;
+            color: white;
+
+        }
+        .del{
+            background-color: $dark-green;
+            text-transform: uppercase;
+
+        }
+        .edit{
+            background-color: $cream;
+        }
+        .list{
+            background-color: $bg-red;
+        }
+    }
+}
+// CREATE GIFT
+#create{
+    button{
+        align-self: center;
+    }
+    label{
+        font-weight: bold;
+    }
+}
+.my-btn{
+    border:none;
+    color: white;
+    font-weight: 700;
+    background-color: $bg-red;
+    &:hover{
+        color: $cream;
+        font-weight: 700;
+        background-color: darken($color: $bg-red, $amount: 10);
+    }
+}
+// EDIT GIFT
+#edit{
+    margin-bottom: 2rem;
+
+
+}
+
+// FOOTER
+footer{
+
+    .footerTop{
+        background-color: $dark-green;
+        color: $not-white;
+        height: 320px;
+
+        display: flex;
+        justify-content: space-between;
+
+        .container{
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            .grid{
+                //text-align: ;
+                a{
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+
+    .footerBottom{
+        height: 150px;
+        background-color: $bg-red;
+        color: $not-white;
+        a{
+            text-decoration: none;
+        }
+    }
+
+}
