@@ -21,7 +21,7 @@ return [
             "surname" => "Verdi",
         ],
         [
-            "title" => "Corsarirs",
+            "title" => "Corsairs",
             "description" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque natus architecto, nam cum repellat commodi deserunt molestias laborum vel.",
             "image" => "https://m.media-amazon.com/images/I/61OpXPSxGSL._AC_SX466_.jpg", //500x500
             "type" => "Videogame",
